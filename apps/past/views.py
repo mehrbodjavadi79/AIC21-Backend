@@ -14,6 +14,7 @@ class PastListAPIView(GenericAPIView):
         pastAIs = self.get_serializer(self.get_queryset(), many=True)
         return Response(data={"data": pastAIs.data}, status=status.HTTP_200_OK)
 
+
 class PastInstanceAPIView(GenericAPIView):
     
     def get(self, request, past_id):
